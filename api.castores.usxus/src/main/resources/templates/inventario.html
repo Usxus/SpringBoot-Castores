@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Inventario Almacén</title>
+    <link rel="stylesheet" th:href="@{/css/inventario.css}">
+</head>
+<body>
+    <h1>Inventario del Almacén</h1>
+    <p th:if="${session.username != null}">Bienvenido, <span th:text="${session.username}"></span>!</p>
+    <div th:if="${error}" style="color: red;">
+        <p th:text="${error}"></p>
+    </div>
+    <form th:action="@{/almacen/inventario}" method="get" th:if="${esAdmin}">
+        <label for="filtroActivo">Mostrar:</label>
+        <select id="filtroActivo" name="activo">
+            <option th:value="${null}" th:selected="${activo == null}">Todos</option>
+            <option th:value="true" th:selected="${activo == true}">Activos</option>
+            <option th:value="false" th:selected="${activo == false}">Inactivos</option>
+        </select>
+        <button type="submit">Filtrar</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad Disponible</th>
+                <th>Activo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="producto : ${productos}" 
+                th:if="${esAlmacenista ? (producto.estadoProducto != null && producto.estadoProducto.activo) : true}">
+                <td th:text="${producto.idProducto}"></td>
+                <td th:text="${producto.nombre}"></td>
+                <td th:text="${producto.precio}"></td>
+                <td th:text="${cantidades[producto.idProducto]}"></td>
+                <td th:text="${producto.estadoProducto != null && producto.estadoProducto.activo ? 'Sí' : 'No'}"></td>
+                <td>
+                    <form th:action="@{/almacen/producto/baja}" method="post" th:if="${producto.estadoProducto != null && producto.estadoProducto.activo && esAdmin}">
+                        <input type="hidden" name="idProducto" th:value="${producto.idProducto}">
+                        <button type="submit">Dar de Baja</button>
+                    </form>
+                    <form th:action="@{/almacen/producto/activar}" method="post" th:if="${producto.estadoProducto != null && !producto.estadoProducto.activo && esAdmin}">
+                        <input type="hidden" name="idProducto" th:value="${producto.idProducto}">
+                        <button type="submit">Activar</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 th:if="${esAdmin}">Agregar Producto</h2>
+    <form th:action="@{/almacen/producto/agregar}" method="post" th:if="${esAdmin}">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="precio">Precio del Producto:</label>
+        <input type="number" id="precio" name="precio" step="0.01" required>
+
+        <button type="submit">Agregar Producto</button>
+    </form>
+    <h2 th:if="${esAdmin}">Incorporar Cantidad Disponible</h2>
+    <form th:action="@{/almacen/producto/modificarCantidad}" method="post" th:if="${esAdmin}">
+        <label for="idProducto">ID del Producto:</label>
+        <input type="number" id="idProducto" name="idProducto" required>
+
+        <label for="cantidad">Modificar Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" required min="1"
+               oninvalid="this.setCustomValidity('La cantidad no puede ser menor que 1')"
+               oninput="this.setCustomValidity('')">
+
+        <button type="submit">Modificar Cantidad</button>
+    </form>
+    <h2 th:if="${esAlmacenista}">Restar Cantidad Disponible</h2>
+    <form th:action="@{/almacen/producto/restarCantidad}" method="post" th:if="${esAlmacenista}">
+        <label for="idProductoRestar">ID del Producto:</label>
+        <input type="number" id="idProductoRestar" name="idProducto" required>
+
+        <label for="cantidadRestar">Cantidad a Restar:</label>
+        <input type="number" id="cantidadRestar" name="cantidad" required min="1"
+               oninvalid="this.setCustomValidity('La cantidad no puede ser menor que 1')"
+               oninput="this.setCustomValidity('')">
+
+        <button type="submit">Restar Cantidad</button>
+    </form>
+    <div th:if="${movimientos != null}">
+        <h2>Histórico de Movimientos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Movimiento</th>
+                    <th>ID Producto</th>
+                    <th>Cantidad</th>
+                    <th>Tipo Movimiento</th>
+                    <th>Fecha Movimiento</th>
+                    <th>Usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="movimiento : ${movimientos}">
+                    <td th:text="${movimiento.idMovimiento}"></td>
+                    <td th:text="${movimiento.idProducto}"></td>
+                    <td th:text="${movimiento.cantidad}"></td>
+                    <td th:text="${movimiento.tipoMovimiento}"></td>
+                    <td th:text="${#temporals.format(movimiento.fechaMovimiento, 'dd/MM/yyyy HH:mm')}"></td>
+                    <td th:text="${movimiento.usuario}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <form th:action="@{/logout}" method="get">
+        <button type="submit">Cerrar Sesión</button>
+    </form>
+</body>
+</html>

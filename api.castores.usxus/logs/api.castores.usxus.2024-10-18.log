@@ -1,0 +1,140 @@
+2024-10-18 03:12:29 ERROR - com.castores.exceptions.CustomExceptions$ResourceNotFoundException: ID no se permite incorporar una cantidad a un registro que no existe en el catalogo.
+2024-10-18 03:12:51 ERROR - com.castores.exceptions.CustomExceptions$ForbiddenException: No se puede incorporar una cantidad en un producto inactivo.
+2024-10-18 03:20:58 ERROR - com.castores.exceptions.CustomExceptions$ForbiddenException: No se puede incorporar una cantidad en un producto inactivo.
+2024-10-18 03:24:39 INFO  - HV000001: Hibernate Validator 8.0.1.Final
+2024-10-18 03:24:39 INFO  - 
+  ______                                     
+ / _____)          _                         
+| /      ____  ___| |_  ___   ____ ____  ___ 
+| |     / _  |/___)  _)/ _ \ / ___) _  )/___)
+| \____( ( | |___ | |_| |_| | |  ( (/ /|___ |
+ \______)_||_(___/ \___)___/|_|   \____|___/ 
+                                             
+api.castores.usxus 1.0.0
+Powered by Spring Boot 3.3.3, JDK-Version: 21.0.4
+
+Alias: usxus 
+Author-Service: Luis Abiel Bonifaz Armenta
+
+2024-10-18 03:24:39 INFO  - Starting UsxusApplication using Java 21.0.4 with PID 1748 (C:\Users\Annie\Documents\SpringBoot-Castores\SpringBoot-Intercam-LuisBonifaz\castoresUsxus\target\classes started by Annie in C:\Users\Annie\Documents\SpringBoot-Castores\SpringBoot-Intercam-LuisBonifaz\castoresUsxus)
+2024-10-18 03:24:39 INFO  - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 03:24:40 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-18 03:24:40 INFO  - Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+2024-10-18 03:24:40 INFO  - Tomcat initialized with port 8080 (http)
+2024-10-18 03:24:40 INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 03:24:40 INFO  - Starting service [Tomcat]
+2024-10-18 03:24:40 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 03:24:40 INFO  - Initializing Spring embedded WebApplicationContext
+2024-10-18 03:24:40 INFO  - Root WebApplicationContext: initialization completed in 1041 ms
+2024-10-18 03:24:41 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-18 03:24:41 INFO  - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-18 03:24:41 INFO  - HHH000026: Second-level cache disabled
+2024-10-18 03:24:41 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-18 03:24:41 INFO  - HikariPool-1 - Starting...
+2024-10-18 03:24:41 INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: b11b2b3d-d50b-4892-b52f-187c832493c7
+2024-10-18 03:24:41 INFO  - HikariPool-1 - Start completed.
+2024-10-18 03:24:41 WARN  - HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-18 03:24:42 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-18 03:24:42 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18 03:24:42 INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-18 03:24:43 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2024-10-18 03:24:43 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-18 03:24:43 INFO  - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 03:24:43 INFO  - Tomcat started on port 8080 (http) with context path '/castores'
+2024-10-18 03:24:43 INFO  - Started UsxusApplication in 4.296 seconds (process running for 4.744)
+2024-10-18 03:24:46 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-18 03:24:46 INFO  - Initializing Servlet 'dispatcherServlet'
+2024-10-18 03:24:46 INFO  - Completed initialization in 1 ms
+2024-10-18 03:24:55 ERROR - com.castores.exceptions.CustomExceptions$ForbiddenException: No se puede restar una cantidad en un producto inactivo.
+2024-10-18 03:28:06 INFO  - HV000001: Hibernate Validator 8.0.1.Final
+2024-10-18 03:28:06 INFO  - 
+  ______                                     
+ / _____)          _                         
+| /      ____  ___| |_  ___   ____ ____  ___ 
+| |     / _  |/___)  _)/ _ \ / ___) _  )/___)
+| \____( ( | |___ | |_| |_| | |  ( (/ /|___ |
+ \______)_||_(___/ \___)___/|_|   \____|___/ 
+                                             
+api.castores.usxus 1.0.0
+Powered by Spring Boot 3.3.3, JDK-Version: 21.0.4
+
+Alias: usxus 
+Author-Service: Luis Abiel Bonifaz Armenta
+
+2024-10-18 03:28:07 INFO  - Starting UsxusApplication using Java 21.0.4 with PID 17276 (C:\Users\Annie\Documents\SpringBoot-Castores\SpringBoot-Intercam-LuisBonifaz\castoresUsxus\target\classes started by Annie in C:\Users\Annie\Documents\SpringBoot-Castores\SpringBoot-Intercam-LuisBonifaz\castoresUsxus)
+2024-10-18 03:28:07 INFO  - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 03:28:07 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-18 03:28:07 INFO  - Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
+2024-10-18 03:28:08 INFO  - Tomcat initialized with port 8080 (http)
+2024-10-18 03:28:08 INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 03:28:08 INFO  - Starting service [Tomcat]
+2024-10-18 03:28:08 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 03:28:08 INFO  - Initializing Spring embedded WebApplicationContext
+2024-10-18 03:28:08 INFO  - Root WebApplicationContext: initialization completed in 1090 ms
+2024-10-18 03:28:08 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-18 03:28:08 INFO  - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-18 03:28:08 INFO  - HHH000026: Second-level cache disabled
+2024-10-18 03:28:08 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-18 03:28:08 INFO  - HikariPool-1 - Starting...
+2024-10-18 03:28:08 INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: afeaeaae-b507-41da-ae92-d15e54ca6bf3
+2024-10-18 03:28:08 INFO  - HikariPool-1 - Start completed.
+2024-10-18 03:28:08 WARN  - HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-18 03:28:09 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-18 03:28:09 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18 03:28:10 INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-18 03:28:10 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2024-10-18 03:28:10 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-18 03:28:11 INFO  - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 03:28:11 INFO  - Tomcat started on port 8080 (http) with context path '/castores'
+2024-10-18 03:28:11 INFO  - Started UsxusApplication in 4.331 seconds (process running for 4.735)
+2024-10-18 03:28:21 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-18 03:28:21 INFO  - Initializing Servlet 'dispatcherServlet'
+2024-10-18 03:28:21 INFO  - Completed initialization in 1 ms
+2024-10-18 03:32:52 ERROR - com.castores.exceptions.CustomExceptions$ResourceNotFoundException: ID no se permite restar una cantidad a un registro que no existe en el catalogo.
+2024-10-18 03:32:59 ERROR - com.castores.exceptions.CustomExceptions$ResourceNotFoundException: ID no se permite restar una cantidad a un registro que no existe en el catalogo.
+2024-10-18 03:35:22 ERROR - com.castores.exceptions.CustomExceptions$ResourceNotFoundException: ID no se permite incorporar una cantidad a un registro que no existe en el catalogo.
+2024-10-18 03:35:41 ERROR - com.castores.exceptions.CustomExceptions$ForbiddenException: No se puede incorporar una cantidad en un producto inactivo.
+2024-10-18 04:37:54 INFO  - HV000001: Hibernate Validator 8.0.1.Final
+2024-10-18 04:37:54 INFO  - 
+  ______                                     
+ / _____)          _                         
+| /      ____  ___| |_  ___   ____ ____  ___ 
+| |     / _  |/___)  _)/ _ \ / ___) _  )/___)
+| \____( ( | |___ | |_| |_| | |  ( (/ /|___ |
+ \______)_||_(___/ \___)___/|_|   \____|___/ 
+                                             
+api.castores.usxus 1.0.0
+Powered by Spring Boot 3.3.3, JDK-Version: 21.0.4
+
+Alias: usxus 
+Author-Service: Luis Abiel Bonifaz Armenta
+
+2024-10-18 04:37:54 INFO  - Starting UsxusApplication using Java 21.0.4 with PID 7072 (C:\Users\Annie\Documents\SpringBoot-Castores\SpringBoot-Castores-LuisBonifaz\api.castores.usxus\target\classes started by Annie in C:\Users\Annie\Documents\SpringBoot-Castores\SpringBoot-Castores-LuisBonifaz\api.castores.usxus)
+2024-10-18 04:37:54 INFO  - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 04:37:55 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-18 04:37:55 INFO  - Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+2024-10-18 04:37:55 INFO  - Tomcat initialized with port 8080 (http)
+2024-10-18 04:37:55 INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 04:37:55 INFO  - Starting service [Tomcat]
+2024-10-18 04:37:55 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 04:37:55 INFO  - Initializing Spring embedded WebApplicationContext
+2024-10-18 04:37:55 INFO  - Root WebApplicationContext: initialization completed in 1053 ms
+2024-10-18 04:37:56 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-18 04:37:56 INFO  - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-18 04:37:56 INFO  - HHH000026: Second-level cache disabled
+2024-10-18 04:37:56 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-18 04:37:56 INFO  - HikariPool-1 - Starting...
+2024-10-18 04:37:56 INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 5a7eadb9-90dc-454b-80a6-f8092cd283a8
+2024-10-18 04:37:56 INFO  - HikariPool-1 - Start completed.
+2024-10-18 04:37:56 WARN  - HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-18 04:37:57 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-18 04:37:57 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18 04:37:57 INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-18 04:37:58 INFO  - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2024-10-18 04:37:58 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-18 04:37:58 INFO  - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 04:37:58 INFO  - Tomcat started on port 8080 (http) with context path '/castores'
+2024-10-18 04:37:58 INFO  - Started UsxusApplication in 4.161 seconds (process running for 4.57)
+2024-10-18 04:38:15 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-18 04:38:15 INFO  - Initializing Servlet 'dispatcherServlet'
+2024-10-18 04:38:15 INFO  - Completed initialization in 1 ms
